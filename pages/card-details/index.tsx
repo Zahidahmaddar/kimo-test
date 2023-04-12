@@ -91,8 +91,11 @@ const cardDetails = () => {
             <h1 className="text-[16px] font-bold py-5">Activities</h1>
             {!loading ? (
               <div className="flex flex-col">
-                {cardDetails.activities?.map((item: any) => (
-                  <div className="flex items-center max-w-full min-w-0 gap-1 px-4 py-4 my-3 bg-white rounded-lg cursor-pointer">
+                {cardDetails.activities?.map((item: any, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center max-w-full min-w-0 gap-1 px-4 py-4 my-3 bg-white rounded-lg cursor-pointer"
+                  >
                     <p className="text-[16px] font-normal">{item.name}</p>
                   </div>
                 ))}
